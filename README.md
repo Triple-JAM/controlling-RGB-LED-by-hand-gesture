@@ -87,6 +87,7 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 | **Segments A–G**     | A0–A5      | (Wire per your display’s datasheet) |
 
 > **Tip:** Use current-limiting resistors (220 Ω–330 Ω) on every LED/segment pin.
+
 > **Tip:** We can use analog pin in arduino by writing DDRC and PORTC registers.
 
 ---
