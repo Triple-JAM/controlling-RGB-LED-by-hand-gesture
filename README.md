@@ -15,13 +15,14 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 ---
 ## 🔍 Table of Contents
 
-1. 🖐️ How It Works
-2. 📦 Prerequisites
-5. ⚡ How It Works
+1. 🖐️ Introduction
+2. 🖼️ Representation
+3. 📦 Prerequisites
+4. ⚡ How It Works
 
 
 ---
-## 🖐️ How It Works
+## 🖐️ Introduction
 
 | Gesture | Functionality                    |
 |---------|----------------------------------|
@@ -35,7 +36,11 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 - 💡 The **Arduino** interprets this and drives the RGB LED and a 7-segment display.  
 
 ---
+## 🖼️ Representation
 
+
+
+---
 ## 📦 Prerequisites
 
 - Python 3.7 or higher
@@ -45,5 +50,10 @@ This project transforms your laptop into a smart gesture recognition hub, using 
   - `mediapipe`
   - `numpy`
   - (Optional) `pyserial` if controlling a physical LED via serial port
+
+---
+## ⚡ How It Works
+
+
 
 ---
