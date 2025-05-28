@@ -37,8 +37,10 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 
 ---
 ## 🖼️ Representation
-
-
+<p align="center">
+  <img src="Assets/ft.jpg" alt="Hand Gesture Demo" width="450"/>
+  <img src="Assets/st.jpg" alt="Hand Gesture Demo" width="450"/>
+<p/>
 
 ---
 ## 📦 Prerequisites
