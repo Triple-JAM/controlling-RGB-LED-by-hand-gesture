@@ -63,7 +63,7 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 
 ### 🖐️ Write a function with mediapipe to find landmark positions
 
-<img src="Assets/land.jpg" alt="Hand Gesture Demo" width="450"/>
+<img src="Assets/land.png" alt="Hand Gesture Demo" width="450"/>
 
 This image represents landmark numbers that we can use to determine the landmark positions (x,y), and then we can write some conditions for their positions.
 
