@@ -38,8 +38,8 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 ---
 ## 🖼️ Representation
 <p align="center">
-  <img src="Assets/ft.jpg" alt="Hand Gesture Demo" width="450"/>
-  <img src="Assets/st.jpg" alt="Hand Gesture Demo" width="450"/>
+  <img src="Assets/ft.jpg" alt="Hand Gesture Demo" width="400"/>
+  <img src="Assets/st.jpg" alt="Hand Gesture Demo" width="400"/>
 <p/>
 
 ---
@@ -56,6 +56,38 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 ---
 ## ⚡ How It Works
 
+# CV: Extract data from webcam
+
+📅 **Last Updated:** May 28, 2025  
+🔌 **Purpose:** get the distance between the index and thumb finger and specify the RGB channel.
+
+### 🖐️ Write a function with mediapipe to find landmark positions
+
+<img src="Assets/land.jpg" alt="Hand Gesture Demo" width="450"/>
+
+This image represents landmark numbers that we can use to determine the landmark positions (x,y), and then we can write some conditions for their positions.
+
+#### ℹ️ Required data
+1. Distance between 4 and 8 landmarks: By using the math library ```math.hypot(x2-x1,y2-y1)```
+2. Is-open or Is-close condition of other fingers: By comparing the heights of 12, 16, and 20 landmarks.
+```
+        if fing_3 and fing_4 and fing_5:
+            RGBchanel = 1
+        if not(fing_3) and fing_4 and fing_5:
+            RGBchanel = 1
+        if fing_3 and not(fing_4) and fing_5:
+            RGBchanel = 1
+        if fing_3 and fing_4 and not(fing_5):
+            RGBchanel = 1
+        if not(fing_3) and not(fing_4) and fing_5:
+            RGBchanel = 2
+        if not(fing_3) and fing_4 and not(fing_5):
+            RGBchanel = 2
+        if fing_3 and not(fing_4) and not(fing_5):
+            RGBchanel = 2
+        if not(fing_3) and not(fing_4) and not(fing_5):
+            RGBchanel = 3
+```
 # Arduino: RGB & 7-Segment Controller
 
 📅 **Last Updated:** May 28, 2025  
