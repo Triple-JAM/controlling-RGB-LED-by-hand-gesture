@@ -54,6 +54,50 @@ This project transforms your laptop into a smart gesture recognition hub, using 
 ---
 ## ⚡ How It Works
 
+# Arduino: RGB & 7-Segment Controller
+
+📅 **Last Updated:** May 28, 2025  
+🔌 **Purpose:** Control an RGB LED’s color & brightness via serial commands—*and* show the selected channel on a seven-segment display simultaneously.
+
+---
+
+## 🚀 Features
+
+- **Serial-driven control**  
+  Send `"<channel>#<level>"` over USB-UART  
+- **Multi-channel RGB**  
+  Adjust each LED channel (R, G, B) from OFF (0) to MAX (9)  
+- **Seven-segment feedback**  
+  Active channel number (1–3) shows on the display  
+- **Plug-and-play**  
+  Minimal wiring and standard Arduino calls  
+
+---
+
+## 🔧 Hardware Setup
+
+| Component            | Arduino Pin | Notes                               |
+|----------------------|-------------|-------------------------------------|
+| **Red LED Channel**  | D11         | PWM output                          |
+| **Green LED Channel**| D10         | PWM output                          |
+| **Blue LED Channel** | D12         | PWM output                          |
+| **7-Seg Anode**      | D3          | Common-anode enable for digit pin   |
+| **Segments A–G**     | D2, D4–D9   | (Wire per your display’s datasheet) |
+
+> **Tip:** Use current-limiting resistors (220 Ω–330 Ω) on every LED/segment pin.
+
+---
+
+## 💻 Serial Command Reference
+
+| Command String | Meaning                                          | Effect                                         |
+|---------------:|--------------------------------------------------|------------------------------------------------|
+| `1#0`          | Channel 1 (Red) → OFF                            | Red LED off; displays “1” on 7-seg             |
+| `2#5`          | Channel 2 (Green) → Medium brightness (≈50%)     | Green LED ≈50%; displays “2”                   |
+| `3#9`          | Channel 3 (Blue) → Max brightness                | Blue LED 100%; displays “3”                    |
+| `X#Y`          | X = 1–3 (R, G, B), Y = 0–9 (map to 0–255 PWM)    | —                                              |
+
+---
 
 
 ---
